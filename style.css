@@ -1,0 +1,333 @@
+2 de 10
+CSS
+Carlos Blasco moreno <blascomorenoc@gmail.com>
+	
+vie, 8 may, 13:49 (hace 11 días)
+	
+	
+para cblamor042
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Montserrat',sans-serif;
+  background:#050505;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px 60px;
+  z-index:1000;
+  backdrop-filter:blur(10px);
+  background:rgba(0,0,0,0.45);
+}
+
+.logo{
+  font-size:2rem;
+  font-weight:900;
+  letter-spacing:3px;
+}
+
+.logo span{
+  color:#b6ff00;
+}
+
+nav{
+  display:flex;
+  gap:40px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  position:relative;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#b6ff00;
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  position:relative;
+  background:url('https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?q=80&w=1600&auto=format&fit=crop');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.75);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  width:95%;
+  display:grid;
+  grid-template-columns:320px 1fr 320px;
+  gap:40px;
+  align-items:center;
+}
+
+/* CARDS */
+
+.card{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:25px;
+  padding:30px;
+  backdrop-filter:blur(12px);
+  box-shadow:0 10px 40px rgba(0,0,0,0.4);
+  margin-bottom:25px;
+}
+
+.card h2{
+  color:#b6ff00;
+  margin-bottom:25px;
+  font-size:1.4rem;
+}
+
+/* RANKING */
+
+.ranking-player{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  padding:15px 0;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.ranking-player span{
+  font-size:1.5rem;
+  font-weight:900;
+  color:#b6ff00;
+}
+
+.ranking-player p{
+  font-weight:600;
+}
+
+/* TORNEOS */
+
+.tournaments ul{
+  list-style:none;
+}
+
+.tournaments li{
+  padding:15px 0;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  font-weight:500;
+}
+
+/* BRANDS */
+
+.brand{
+  background:#111;
+  padding:15px;
+  border-radius:15px;
+  margin-bottom:15px;
+  transition:0.3s;
+  cursor:pointer;
+}
+
+.brand:hover{
+  background:#b6ff00;
+  color:black;
+  transform:translateX(10px);
+}
+
+/* CENTRO */
+
+.center-area{
+  text-align:center;
+}
+
+.main-logo{
+  width:350px;
+  height:350px;
+  margin:auto;
+  border-radius:50%;
+  overflow:hidden;
+  border:5px solid #b6ff00;
+  box-shadow:0 0 50px rgba(182,255,0,0.4);
+  animation:float 4s ease-in-out infinite;
+}
+
+.main-logo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.center-area h1{
+  font-size:6rem;
+  margin-top:40px;
+  font-weight:900;
+  letter-spacing:8px;
+}
+
+.center-area h1::after{
+  content:'';
+  width:180px;
+  height:6px;
+  background:#b6ff00;
+  display:block;
+  margin:20px auto;
+  border-radius:50px;
+}
+
+.center-area p{
+  max-width:700px;
+  margin:auto;
+  font-size:1.2rem;
+  line-height:2;
+  color:#ddd;
+}
+
+.center-area button{
+  margin-top:40px;
+  padding:20px 55px;
+  border:none;
+  border-radius:50px;
+  background:#b6ff00;
+  color:black;
+  font-size:1rem;
+  font-weight:800;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.center-area button:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 30px rgba(182,255,0,0.7);
+}
+
+/* NEWS */
+
+.news-item{
+  margin-bottom:30px;
+}
+
+.news-item h3{
+  margin-bottom:10px;
+  color:white;
+}
+
+.news-item p{
+  color:#aaa;
+  line-height:1.8;
+}
+
+/* GALLERY */
+
+.gallery{
+  padding:120px 60px;
+  background:#0a0a0a;
+}
+
+.gallery h2{
+  text-align:center;
+  font-size:4rem;
+  margin-bottom:70px;
+  color:#b6ff00;
+  font-weight:900;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.gallery-grid img{
+  width:100%;
+  height:400px;
+  object-fit:cover;
+  border-radius:30px;
+  transition:0.5s;
+}
+
+.gallery-grid img:hover{
+  transform:scale(1.05);
+}
+
+/* ANIMATION */
+
+@keyframes float{
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-15px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1200px){
+
+  .hero-content{
+    grid-template-columns:1fr;
+    padding-top:150px;
+  }
+
+  .center-area{
+    order:-1;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .navbar{
+    flex-direction:column;
+    gap:20px;
+    padding:25px;
+  }
+
+  nav{
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .center-area h1{
+    font-size:4rem;
+  }
+
+  .main-logo{
+    width:250px;
+    height:250px;
+  }
+
+  .gallery h2{
+    font-size:2.5rem;
+  }
+
+}
