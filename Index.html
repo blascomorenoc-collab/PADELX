@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PADEL X</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- AUDIO -->
+    <audio id="intro-audio">
+      <source
+        src="https://drive.google.com/drive/my-drive?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto"
+        type="audio/mpeg"
+      />
+    </audio>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="logo">
+        PADEL
+        <span>X</span>
+      </div>
+
+      <nav>
+        <a href="#">Marcas</a>
+        <a href="#">Torneos</a>
+        <a href="#">Tienda</a>
+        <a href="#">Noticias</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="overlay"></div>
+
+      <div class="hero-content">
+        <div class="left-panels">
+          <!-- Ranking -->
+          <div class="card ranking">
+            <h2>🏆 Ranking Padel</h2>
+
+            <div class="ranking-player">
+              <span>1.</span>
+              <p>Coello</p>
+            </div>
+
+            <div class="ranking-player">
+              <span>2.</span>
+              <p>Tapia</p>
+            </div>
+
+            <div class="ranking-player">
+              <span>3.</span>
+              <p>Stupa</p>
+            </div>
+
+            <div class="ranking-player">
+              <span>4.</span>
+              <p>Chingotto</p>
+            </div>
+          </div>
+
+          <!-- Torneos -->
+          <div class="card tournaments">
+            <h2>🎾 Torneos Próximos</h2>
+
+            <ul>
+              <li>Madrid Open</li>
+              <li>Qatar World Padel</li>
+              <li>Alicante Open</li>
+              <li>Premier Padel Brasil</li>
+            </ul>
+          </div>
+
+          <!-- Palas -->
+          <div class="card brands">
+            <h2>🔥 Palas Top</h2>
+
+            <div class="brand">Bullpadel</div>
+            <div class="brand">Nox</div>
+            <div class="brand">Babolat</div>
+            <div class="brand">Adidas</div>
+          </div>
+        </div>
+
+        <!-- CENTRO -->
+        <div class="center-area">
+          <div class="main-logo">
+            <img
+              src="data:image/jpeg;base64,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"
+            />
+          </div>
+
+          <h1>PADEL X</h1>
+
+          <p>
+            La nueva generación del pádel profesional. Torneos, rankings,
+            noticias y las mejores marcas.
+          </p>
+
+          <button>EXPLORAR</button>
+        </div>
+
+        <!-- NOTICIAS -->
+        <div class="right-panels">
+          <div class="card news">
+            <h2>📰 Noticias</h2>
+
+            <div class="news-item">
+              <h3>Coello y Tapia imparables</h3>
+              <p>
+                Los número uno vuelven a dominar el circuito con una final
+                espectacular.
+              </p>
+            </div>
+
+            <div class="news-item">
+              <h3>Nuevo torneo en Dubai</h3>
+              <p>
+                Premier Padel confirma una nueva sede para la próxima temporada.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="gallery">
+      <h2>GALERÍA PADEL X</h2>
+
+      <div class="gallery-grid">
+        <img
+          src="https://i.ytimg.com/vi/l6H85ZEPngA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB44smJdZI_tmY2yNQDeU-mNVviNw"
+        />
+        <img
+          src="https://www.commvault.com/wp-content/uploads/2025/09/DSC06429-scaled.jpg"
+        />
+        <img
+          src="https://www.padelfip.com/wp-content/uploads/2025/11/Chingo-1024x717.jpeg"
+        />
+        <img
+          src="https://www.zonadepadel.es/blog/wp-content/uploads/2023/10/422.jpg"
+        />
+      </div>
+    </section>
+
+    <!-- SCRIPT AUDIO -->
+    <script>
+      window.addEventListener("load", () => {
+        const audio = document.getElementById("intro-audio");
+
+        // intenta autoplay
+        audio.play().catch(() => {
+          // si el navegador lo bloquea,
+          // suena al primer click
+          document.addEventListener(
+            "click",
+            () => {
+              audio.play();
+            },
+            { once: true }
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
